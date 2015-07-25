@@ -1,0 +1,143 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left"
+    android:orientation="vertical"
+    android:background="@color/tan"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/palette"
+        android:gravity="left"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Views with different colors will be inserted here by MainActivity java code -->
+
+    </LinearLayout>
+
+    <edu.nyu.scps.JUL18.SketchPadView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:id="@+id/sketchPad"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="5"
+            android:max="14"
+            android:id="@+id/size"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/control_horizontal_margin"
+        android:paddingRight="@dimen/control_horizontal_margin"
+        android:paddingTop="@dimen/control_vertical_margin"
+        android:paddingBottom="@dimen/control_vertical_margin"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/brush"
+            android:text="@string/brush"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/yellow"
+            android:layout_weight="1"
+            android:id="@+id/stamp"
+            android:text="@string/stamp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/control_horizontal_margin"
+        android:paddingRight="@dimen/control_horizontal_margin"
+        android:paddingTop="@dimen/control_vertical_margin"
+        android:paddingBottom="@dimen/control_vertical_margin"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/yellow"
+            android:layout_weight="1"
+            android:id="@+id/circle"
+            android:text="@string/circle"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/square"
+            android:text="@string/square"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/triangle"
+            android:text="@string/triangle"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/star"
+            android:text="@string/star"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/control_horizontal_margin"
+        android:paddingRight="@dimen/control_horizontal_margin"
+        android:paddingTop="@dimen/control_vertical_margin"
+        android:paddingBottom="@dimen/control_vertical_margin"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:id="@+id/current_color"
+            android:text="@string/current_color"/>
+    </LinearLayout>
+</LinearLayout>
+
+

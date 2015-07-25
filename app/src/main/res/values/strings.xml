@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AndroidPaint</string>
+
+    <string name="brush">Brush</string>
+    <string name="stamp">Stamp</string>
+
+    <string name="circle">Circle</string>
+    <string name="square">Square</string>
+    <string name="triangle">Triangle</string>
+    <string name="star">Star</string>
+
+    <string name="current_color">Current Color</string>
+
+    <string name="save_complete">Save Complete</string>
+
+    <string name="action_load">Load</string>
+    <string name="action_save">Save</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_settings">Settings</string>
+</resources>

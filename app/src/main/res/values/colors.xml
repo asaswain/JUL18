@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="orange">#FFFF8000</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="green">#FF00FF00</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="purple">#FF4B0082</color>
+    <color name="indigo">#FF7F00FF</color>
+    <color name="darkgrey">#FF808080</color>
+    <color name="tan">#FFD2B48C</color>
+    <color name="black">#FF000000</color>
+    <color name="CGA16_1">#FFFFFFFF</color>
+    <color name="CGA16_2">#FFAAAAAA</color>
+    <color name="CGA16_3">#FFFFFF55</color>
+    <color name="CGA16_4">#FFAA5500</color>
+    <color name="CGA16_5">#FFFF55FF</color>
+    <color name="CGA16_6">#FFAA00AA</color>
+    <color name="CGA16_7">#FFFF5555</color>
+    <color name="CGA16_8">#FFAA0000</color>
+    <color name="CGA16_9">#FF55FFFF</color>
+    <color name="CGA16_10">#FF00AAAA</color>
+    <color name="CGA16_11">#FF55FF55</color>
+    <color name="CGA16_12">#FF00AA00</color>
+    <color name="CGA16_13">#FF5555FF</color>
+    <color name="CGA16_14">#FF0000AA</color>
+    <color name="CGA16_15">#FF555555</color>
+    <color name="CGA16_16">#FF000000</color>
+</resources>
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/swaina/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/Users/swaina/AndroidStudioProjects/Prev/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-f225eb78c700e6339e58f97432ef8146b87dba07.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/Prev/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/swaina/AndroidStudioProjects/Prev/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-70779695437f1f2a1d17a12f548826af24da8503.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUL18/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUL18/app/build/intermediates/pre-dexed/debug/classes-fdc76fca1cc2f32c50c41bef1ffe3776849cfd62.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN6/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN6/app/build/intermediates/pre-dexed/debug/classes-05ae80bd909da1a7c74d2baab523da49d30b6aa2.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN13/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN13/app/build/intermediates/pre-dexed/debug/classes-6395bc233baf1acd4e26c00d59d9669e7e7c3ce4.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUL18/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUL18/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-fa7709d0feb1d7717abb254f265d298a548826b9.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN20/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN20/app/build/intermediates/pre-dexed/debug/classes-cc9c49df85883d296d890287e7659c56c608fc7c.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN13/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN13/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-3425dbd18754569b9378cbf40d5fb921974306e4.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUL18/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUL18/app/build/intermediates/pre-dexed/debug/classes-622b9b9aec0db8a0cf847948d382b0f89339af57.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/Prev/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/swaina/AndroidStudioProjects/Prev/app/build/intermediates/pre-dexed/debug/classes-1780621ff289b5150a8b6d3cfeeca120f2ad24dc.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN6/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN6/app/build/intermediates/pre-dexed/debug/classes-de07627b75f837b02a55161040d815e12727751f.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN20/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN20/app/build/intermediates/pre-dexed/debug/classes-adc0ea149dd1d8c49af0ec2d155026dedf7dc40e.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN6/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN6/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-5a20550347c1d70425017e80dc0ec491ef7b5203.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/Prev/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/swaina/AndroidStudioProjects/Prev/app/build/intermediates/pre-dexed/debug/classes-3788ce626703322b0a0f224c686849305d64ea3c.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN13/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN13/app/build/intermediates/pre-dexed/debug/classes-a001160d10db92a37c14785245aa1b868d06569b.jar" />
+    </item>
+    <item
+        jar="/Users/swaina/AndroidStudioProjects/JUN20/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/swaina/AndroidStudioProjects/JUN20/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-451e2eb9a4c95cc0a9e6639af43de39032040268.jar" />
+    </item>
+
+</items>
