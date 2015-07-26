@@ -3,7 +3,6 @@ package edu.nyu.scps.JUL18;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.PixelFormat;
 import android.graphics.PointF;
 
@@ -14,7 +13,7 @@ public class SquareDrawable extends ShapeDrawable {
 
     public SquareDrawable(float x, float y, float radius, Paint paint) {
         setShape("Square");
-        setColor(paint);
+        SetColor(paint);
         setCenter(new PointF(x, y));
         setSize(radius);
         int b = (int) radius;
@@ -23,8 +22,6 @@ public class SquareDrawable extends ShapeDrawable {
 
     @Override
     public void draw(Canvas canvas) {
-        Path path = new Path();
-
         /*
         Assume X axis points right, Y axis points up.
         */
@@ -35,17 +32,17 @@ public class SquareDrawable extends ShapeDrawable {
         float maxX = getCenter().x + getSize();
         float maxY = getCenter().y + getSize();
 
-        canvas.drawRect(minX, minY, maxX, maxY, getColor());
+        canvas.drawRect(minX, minY, maxX, maxY, getPaint());
     }
 
     @Override
     public void setAlpha(int alpha) {
-        getColor().setAlpha(alpha);
+        getPaint().setAlpha(alpha);
     }
 
     @Override
     public void setColorFilter(ColorFilter cf) {
-        getColor().setColorFilter(cf);
+        getPaint().setColorFilter(cf);
     }
 
     @Override

@@ -6,7 +6,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -116,8 +115,8 @@ public class MainActivity extends AppCompatActivity {
 
         ShapeOnClickListener shapeOnClickListener = new ShapeOnClickListener();
 
-        for (int i = 0; i < shapeList.length; ++i) {
-            Button shapeView = (Button) findViewById(shapeList[i]);
+        for (int tmpShapeList : shapeList) {
+            Button shapeView = (Button) findViewById(tmpShapeList);
             // set an onClickListener for all the views in the shape palette  to enable us to change the shape
             shapeView.setOnClickListener(shapeOnClickListener);
         }
@@ -126,8 +125,8 @@ public class MainActivity extends AppCompatActivity {
 
         BrushOnClickListener brushOnClickListener = new BrushOnClickListener();
 
-        for (int i = 0; i < brushList.length; ++i) {
-            Button brushView = (Button) findViewById(brushList[i]);
+        for (int tmpBrushList : brushList) {
+            Button brushView = (Button) findViewById(tmpBrushList);
             // set an onClickListener for all the views in the shape palette  to enable us to change the shape
             brushView.setOnClickListener(brushOnClickListener);
         }
@@ -157,9 +156,9 @@ public class MainActivity extends AppCompatActivity {
             String text = button.getText().toString();
             sketchPad.setShape(text);
 
-            for (int i = 0; i < shapeList.length; ++i) {
-                Button shapeView = (Button) findViewById(shapeList[i]);
-                Log.d("shape", ""+shapeList[i]);
+            for (int tmpShapeList : shapeList) {
+                Button shapeView = (Button) findViewById(tmpShapeList);
+                //Log.d("shape", "" + tmpShapeList);
                 shapeView.setBackgroundColor(Color.WHITE);
             }
 
@@ -177,8 +176,8 @@ public class MainActivity extends AppCompatActivity {
             String text = button.getText().toString();
             sketchPad.setDrawType(text);
 
-            for (int i = 0; i < brushList.length; ++i) {
-                Button brushView = (Button) findViewById(brushList[i]);
+            for (int tmpBrushList : brushList) {
+                Button brushView = (Button) findViewById(tmpBrushList);
                 brushView.setBackgroundColor(Color.WHITE);
             }
 

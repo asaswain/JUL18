@@ -6,6 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+/**
+ * This class stores the methods for creating the SQLite database and for selecting data to load/update in the SQLite database
+ */
 
 public class Helper extends SQLiteOpenHelper {
 
@@ -26,12 +29,11 @@ public class Helper extends SQLiteOpenHelper {
         this.databaseName = databaseName;
     }
 
+    // this method only fires when the database is missing
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //a Java array of five Strings containing five SQLite statements.
-        String[] statements = {
-                "DROP TABLE if exists " + shapeTableName +";",
 
+        String[] statements = {
                 "CREATE TABLE " + shapeTableName + " ("
                         + "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
                         + "save_name TEXT,"
@@ -41,8 +43,6 @@ public class Helper extends SQLiteOpenHelper {
                         + "shape TEXT,"
                         + "color TEXT"
                         + ");",
-
-                //"INSERT INTO " + shapeTableName + " (_id, save_name, xcoor, ycoor, radius, shape, color) VALUES (NULL, 'testsave', 100, 100, 20, 'Circle', -65536);",
         };
 
         for (String statement: statements) {
@@ -55,7 +55,7 @@ public class Helper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
 
-    // get cursor for loading/saving data
+    // This method gets the cursor for loading/saving data
     public Cursor getCursor(String fileName) {
         SQLiteDatabase db = getReadableDatabase(); // the db passed to onCreate
         //can say "_id, name" instead of "*", but _id must be included.

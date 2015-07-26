@@ -56,19 +56,17 @@ public class SketchPadView extends View {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
-                float radius;
-                Paint tmpPaint;
+                float size;
+                // copy paint object before inserting into array (to avoid pointing to original which will change)
+                Paint tmpPaint = new Paint(paint);
 
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         // create new point object
 
-                        radius = scale * Math.min(getWidth(), getHeight());
+                        size = scale * Math.min(getWidth(), getHeight());
 
-                        // copy paint object before inserting into array (to avoid pointing to original which will change)
-                        tmpPaint = new Paint(paint);
-
-                        cursorImage = buildImage(event.getX(), event.getY(), radius, shape, tmpPaint);
+                        cursorImage = buildImage(event.getX(), event.getY(), size, shape, tmpPaint);
                         invalidate();    //call onDraw method of TouchView
 
                         return true;    //do nothing else
@@ -83,12 +81,9 @@ public class SketchPadView extends View {
                         return false;    //do nothing else
 
                     case MotionEvent.ACTION_MOVE:
-                        radius = scale * Math.min(getWidth(), getHeight());
+                        size = scale * Math.min(getWidth(), getHeight());
 
-                        // copy paint object before inserting into array (to avoid pointing to original which will change)
-                        tmpPaint = new Paint(paint);
-
-                        cursorImage = buildImage(event.getX(), event.getY(), radius, shape, tmpPaint);
+                        cursorImage = buildImage(event.getX(), event.getY(), size, shape, tmpPaint);
                         if (drawType.equals("Brush")) {
                             if (cursorImage != null) {
                                 imageList.add(cursorImage);
@@ -123,32 +118,36 @@ public class SketchPadView extends View {
 
     // build drawable object depending on shape parameter
     private ShapeDrawable buildImage(float xCoor, float yCoor, float size, String shape, Paint color) {
-        ShapeDrawable tmpShape = null;
-
         if (shape.equals("Circle")) {
-            tmpShape = new CircleDrawable(xCoor, yCoor, size, color);
+            return new CircleDrawable(xCoor, yCoor, size, color);
         } else if (shape.equals("Square")) {
-            tmpShape = new SquareDrawable(xCoor, yCoor, size, color);
+            return new SquareDrawable(xCoor, yCoor, size, color);
         } else if (shape.equals("Triangle")) {
-            tmpShape = new TriangleDrawable(xCoor, yCoor, size, color);
+            return new TriangleDrawable(xCoor, yCoor, size, color);
         } else if (shape.equals("Star")) {
-            tmpShape = new StarDrawable(xCoor, yCoor, size, color);
+            return new StarDrawable(xCoor, yCoor, size, color);
+        } else {
+            return null;
         }
-
-        return tmpShape;
     }
 
-    // draw images using data from an SQLite database
+    // draw images using data from the SQLite database
     public void loadData(Helper helper, String fileName) {
         Cursor cursor = helper.getCursor(fileName);
 
         try {
+            int columnXCoor = cursor.getColumnIndex("xcoor");
+            int columnYCoor = cursor.getColumnIndex("ycoor");
+            int columnSize = cursor.getColumnIndex("radius");
+            int columnShape = cursor.getColumnIndex("shape");
+            int columnColor = cursor.getColumnIndex("color");
+
             do {
-                float xCoor = cursor.getFloat(cursor.getColumnIndex("xcoor"));
-                float yCoor = cursor.getFloat(cursor.getColumnIndex("ycoor"));
-                float size = cursor.getFloat(cursor.getColumnIndex("radius"));
-                String shape = cursor.getString(cursor.getColumnIndex("shape"));
-                int colorName = cursor.getInt(cursor.getColumnIndex("color"));
+                float xCoor = cursor.getFloat(columnXCoor);
+                float yCoor = cursor.getFloat(columnYCoor);
+                float size = cursor.getFloat(columnSize);
+                String shape = cursor.getString(columnShape);
+                int colorName = cursor.getInt(columnColor);
                 Paint tmpPaint = new Paint();
                 tmpPaint.setColor(colorName);
 
@@ -156,9 +155,9 @@ public class SketchPadView extends View {
                 if (storedImage != null) {
                     imageList.add(storedImage);
                 }
-
-                invalidate();    //call onDraw method of TouchView
             } while (cursor.moveToNext());
+
+            invalidate();    //call onDraw method of TouchView
         } finally {
             cursor.close();
         }
@@ -179,7 +178,7 @@ public class SketchPadView extends View {
                 float yCoor = savedImage.getYCoor();
                 float size = savedImage.getSize();
                 String shape = savedImage.getShape();
-                Paint tmpPaint = savedImage.getColor();
+                Paint tmpPaint = savedImage.getPaint();
                 int color = tmpPaint.getColor();
 
                 ContentValues contentValues = new ContentValues();
@@ -192,7 +191,7 @@ public class SketchPadView extends View {
 
                 database.insert(helper.getShapeTableName(), null, contentValues);
                 //changeCursor(helper.getCursor());
-            } while (cursor.moveToNext());
+            }
         } finally {
             cursor.close();
         }

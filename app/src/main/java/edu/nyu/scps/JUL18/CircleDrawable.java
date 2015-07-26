@@ -3,7 +3,6 @@ package edu.nyu.scps.JUL18;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.PixelFormat;
 import android.graphics.PointF;
 
@@ -14,7 +13,7 @@ public class CircleDrawable extends ShapeDrawable {
 
     public CircleDrawable(float x, float y, float radius, Paint paint) {
         setShape("Circle");
-        setColor(paint);
+        SetColor(paint);
         setCenter(new PointF(x, y));
         setSize(radius);
         int b = (int) radius;
@@ -23,19 +22,17 @@ public class CircleDrawable extends ShapeDrawable {
 
     @Override
     public void draw(Canvas canvas) {
-        Path path = new Path();
-
-        canvas.drawCircle(getCenter().x, getCenter().y, getSize(), getColor());
+        canvas.drawCircle(getCenter().x, getCenter().y, getSize(), getPaint());
     }
 
     @Override
     public void setAlpha(int alpha) {
-        getColor().setAlpha(alpha);
+        getPaint().setAlpha(alpha);
     }
 
     @Override
     public void setColorFilter(ColorFilter cf) {
-        getColor().setColorFilter(cf);
+        getPaint().setColorFilter(cf);
     }
 
     @Override

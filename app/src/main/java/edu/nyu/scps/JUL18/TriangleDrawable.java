@@ -15,7 +15,7 @@ public class TriangleDrawable extends ShapeDrawable {
 
     public TriangleDrawable(float x, float y, float radius, Paint paint) {
         setShape("Triangle");
-        setColor(paint);
+        SetColor(paint);
         setCenter(new PointF(x, y));
         setSize(radius);
         int b = (int) radius;
@@ -48,17 +48,17 @@ public class TriangleDrawable extends ShapeDrawable {
         }
 
         path.close();
-        canvas.drawPath(path, getColor());
+        canvas.drawPath(path, getPaint());
     }
 
     @Override
     public void setAlpha(int alpha) {
-        getColor().setAlpha(alpha);
+        getPaint().setAlpha(alpha);
     }
 
     @Override
     public void setColorFilter(ColorFilter cf) {
-        getColor().setColorFilter(cf);
+        getPaint().setColorFilter(cf);
     }
 
     @Override

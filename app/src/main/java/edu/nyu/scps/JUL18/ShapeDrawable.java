@@ -31,7 +31,7 @@ public abstract class ShapeDrawable extends Drawable {
         return size;
     }
 
-    public Paint getColor() {
+    public Paint getPaint() {
         return color;
     }
 
@@ -43,19 +43,19 @@ public abstract class ShapeDrawable extends Drawable {
         this.center = center;
     }
 
-    public void setXCoor(float xCoor) {
-        this.center.x = xCoor;
-    }
+    //public void setXCoor(float xCoor) {
+    //    this.center.x = xCoor;
+    //}
 
-    public void setYCoor(float yCoor) {
-        this.center.y = yCoor;
-    }
+    //public void setYCoor(float yCoor) {
+    //    this.center.y = yCoor;
+    //}
 
     public void setSize(float size) {
         this.size = size;
     }
 
-    public void setColor(Paint color) {
+    public void SetColor(Paint color) {
         this.color = color;
     }
 
