@@ -8,13 +8,13 @@ import android.graphics.PixelFormat;
 import android.graphics.PointF;
 
 /**
- * This class draws a star on the canvas (simple 2 triangles invetered on each other)
+ * This class draws a 6 pointed star on the canvas (simply drawing two triangles inverted on each other)
  */
 public class StarDrawable extends ShapeDrawable {
 
     public StarDrawable(float x, float y, float radius, Paint paint) {
         setShape("Star");
-        setColor(paint);
+        SetColor(paint);
         setCenter(new PointF(x, y));
         setSize(radius);
         int b = (int)radius;
@@ -47,7 +47,7 @@ public class StarDrawable extends ShapeDrawable {
         }
 
         path.close();
-        canvas.drawPath(path, getColor());
+        canvas.drawPath(path, getPaint());
 
         /*
         Assume X axis points right, Y axis points up.
@@ -70,17 +70,17 @@ public class StarDrawable extends ShapeDrawable {
         }
 
         path.close();
-        canvas.drawPath(path, getColor());
+        canvas.drawPath(path, getPaint());
     }
 
     @Override
     public void setAlpha(int alpha) {
-        getColor().setAlpha(alpha);
+        getPaint().setAlpha(alpha);
     }
 
     @Override
     public void setColorFilter(ColorFilter cf) {
-        getColor().setColorFilter(cf);
+        getPaint().setColorFilter(cf);
     }
 
     @Override
